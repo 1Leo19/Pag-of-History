@@ -1,0 +1,346 @@
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    background-color: #0A192F; /* Azul marino oscuro */
+    margin: 0;
+    padding: 0;
+    color: #FFF; /* Color del texto */
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+header {
+    background-color: #0A192F; /* Azul marino oscuro */
+    color: #FFF; /* Color del texto */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    max-width: 100px; /* Ancho máximo del logo */
+}
+
+.navegacion {
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #FFF; /* Color de los enlaces */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Color al pasar el mouse */
+}
+
+.imagen-fondo {
+    background-image: url('img/fondo1.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Altura de la sección con la imagen */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo {
+    color: #FFF;    
+    font-size: 83px;
+    text-align: center;
+    padding: 20px;  
+    max-width: 50%; /* Ancho del contenido */
+    margin: 0;
+}
+
+section h2 {
+    margin-left: 20px;
+    color: wheat;
+}
+section h3 {
+    margin-left: 20px;
+    color: lavender;
+}
+section p {
+    margin-left: 20px;
+    color: #ccc;
+}
+
+/* Estilos para la sección de personajes históricos */
+#per {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Columnas automáticas */
+    gap: 20px; /* Espacio entre las cajas */
+}
+.personaje img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+    .historicos-informatica,
+    .historicos-internet {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Columnas automáticas */
+        gap: 20px; /* Espacio entre las cajas */
+        text-align: center;
+        align-items: flex-start; /* Alinear elementos hacia arriba */
+    }
+
+    .historicos-informatica img,
+    .historicos-internet img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        max-width: 150px; /* Ajustar el ancho máximo */
+        max-height: 150px; /* Ajustar la altura máxima */
+    }
+
+    .nombre-personaje {
+        margin-top: 5px;
+        color: #FFF;
+    }
+    .info a {
+        color: crimson
+    }
+
+/* Estilos para los hitos */
+.hito {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.hito h3 {
+    margin-bottom: 5px;
+}
+
+.hito img {
+    display: block;
+    width: 200px; /* Ancho deseado */
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.contenido img {
+    margin-left: 20px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+
+
+/* Estilos para el área de comentarios */
+.comentarios {
+    background-color: #000000;
+    padding: 20px; /* Aumentado el padding para mayor espacio entre elementos */
+    border-radius: 5px;
+    margin-bottom: 20px; /* Ajustado el margen inferior */
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFFFFF; /* Color del texto */
+}
+
+.comentarios p {
+    font-size: 16px; /* Ajuste del tamaño del texto */
+    margin-bottom: 15px; /* Ajuste del margen inferior */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px); /* Ancho del campo de entrada */
+    padding: 10px; /* Ajuste del relleno */
+    margin-bottom: 15px; /* Ajuste del margen inferior */
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    color: #333333; /* Color del texto */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px; /* Ajuste del relleno */
+    border-radius: 3px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para los enlaces a redes sociales */
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.redes-sociales a {
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.redes-sociales i {
+    font-size: 24px;
+    color: #000;
+}
+.redes-sociales a.whatsapp i {
+    color: #25D366; /* Color de WhatsApp */
+}
+
+.redes-sociales a.facebook i {
+    color: #3b5998; /* Color de Facebook */
+}
+
+.redes-sociales a.telegram i {
+    color: #0088cc; /* Color de Telegram */
+}
+
+footer {
+    text-align: center;
+
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Cambia la dirección del flexbox para apilar elementos verticalmente */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .logo img {
+        max-width: 80%; /* Reducir el ancho del logo en pantallas pequeñas */
+        margin-bottom: 15px; /* Espacio entre el logo y la navegación */
+    }
+
+    .navegacion {
+        text-align: center; /* Centra los enlaces */
+        margin-bottom: 15px; /* Espacio entre enlaces */
+    }
+
+    nav ul li {
+        display: block; /* Cambia los elementos de enlace a bloques para apilarlos verticalmente */
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-bottom: 10px; /* Espacio entre enlaces */
+    }
+
+    .imagen-fondo {
+        height: 300px; /* Reducir la altura de la sección con la imagen */
+    }
+
+    .titulo {
+        font-size: 50px; /* Reducir el tamaño del título en pantallas pequeñas */
+        max-width: 80%; /* Ancho máximo del contenido */
+    }
+
+    /* Estilos para la sección de personajes históricos en pantallas pequeñas */
+    #per,
+    .historicos-informatica,
+    .historicos-internet {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Reducir el tamaño de las imágenes */
+    }
+
+    .historicos-informatica img,
+    .historicos-internet img {
+        max-width: 120px; /* Reducir el tamaño de las imágenes */
+        max-height: 120px; /* Reducir el tamaño de las imágenes */
+    }
+
+    /* Estilos para los hitos en pantallas pequeñas */
+    .hito img {
+        width: 100%; /* Hace que las imágenes se ajusten al ancho del contenedor */
+        max-width: 100%; /* Asegura que las imágenes no se desborden */
+    }
+}
+
+
+nav {
+    position: fixed;
+    /* posicion fija*/
+    height: 80px;
+    /* altura definida */
+   overflow: hidden;
+     /*ocultar los contenidos que sobresalen de la caja.*/
+    top: 0;
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+}
+.menu{
+    position: absolute;
+    right: 50px;
+}
+
+.menu a{
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 30px;
+    transition: color 1s;
+    /*text-transform: uppercase;*/
+}
+
+/* ESTILOS PARA EL MENU DESPLEGABLE */
+.btn {
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+.btn:hover > span {
+    background-color: #E85860;
+}
+.btn span {
+    display: block;
+    margin: 6px;
+    width: 40px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 550px){
+    nav {
+        overflow: visible;
+    }
+    .menu {
+        width: 100%;
+        right: 0;
+        top: 80px;
+        background: #888888e6;
+        overflow: hidden;
+        max-height: 0;
+    }
+    .menu a{
+        display: block;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+    }
+    .btn {
+        display: block;
+        cursor: pointer;
+    }
+    .show {
+        max-height: 500px;
+    }
+}
